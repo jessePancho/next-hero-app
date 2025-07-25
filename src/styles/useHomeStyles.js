@@ -5,6 +5,7 @@ export const useHomeStyles = () => {
 
   return {
     container: {
+      background: 'black',
       display: 'flex',
       flexDirection: 'column',
       alignItems: 'center',

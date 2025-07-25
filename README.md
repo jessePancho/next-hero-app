@@ -1,40 +1,141 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Next Hero App
+
+Next Hero App is a superhero search application built with Next.js. It allows users to search for their favorite superheroes and view detailed information about them, including their stats and biography.
+
+## Features
+
+- **Superhero Search**: Search for superheroes by name using the RapidAPI Superhero API.
+- **Detailed Information**: View stats like intelligence, strength, speed, and more.
+- **Responsive Design**: Fully responsive UI for seamless use across devices.
+- **Theming**: Integrated with Material-UI for consistent theming and styling.
+- **State Management**: Redux Toolkit for efficient state management.
+- **Error Handling**: Graceful error messages for failed API requests or invalid searches.
+
+## Technologies Used
+
+- **Frontend**: React, Next.js, Material-UI
+- **State Management**: Redux Toolkit
+- **API Integration**: Axios, RapidAPI Superhero API
+- **Styling**: Material-UI's CSS-in-JS
+- **Build Tool**: Next.js
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- Node.js (v16 or later)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/jessePancho/next-hero-app.git
+   cd next-hero-app
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   # or
+   yarn install
+   ```
+
+3. Create a `.env` file in the root directory and add the following:
+   ```env
+   RAPIDAPI_KEY=your_rapidapi_key_here
+   ```
+
+### Running the App
+
+- Start the development server:
+
+  ```bash
+  npm run dev
+  # or
+  yarn dev
+  ```
+
+- Open [http://localhost:3000](http://localhost:3000) in your browser to view the app.
+
+### Building for Production
+
+- Build the app for production:
+
+  ```bash
+  npm run build
+  # or
+  yarn build
+  ```
+
+- Start the production server:
+  ```bash
+  npm start
+  # or
+  yarn start
+  ```
+
+## Project Structure
+
+```
+next-hero-app/
+├── public/                # Static assets
+├── src/
+│   ├── components/        # Reusable components
+│   │   ├── Form/          # Superhero search form
+│   │   ├── Footer/        # Footer component
+│   │   ├── Heading/       # Page heading
+│   │   └── SuperheroCard/ # Superhero details card
+│   ├── pages/             # Next.js pages
+│   │   ├── api/           # API routes
+│   │   ├── _app.js        # Custom App component
+│   │   └── index.js       # Home page
+│   ├── redux/             # Redux store and slices
+│   ├── shared/            # Shared constants and utilities
+│   └── styles/            # Global and component-specific styles
+├── .env                   # Environment variables
+├── package.json           # Project metadata and scripts
+└── README.md              # Project documentation
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## API Integration
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+This app uses the [RapidAPI Superhero API](https://rapidapi.com/) to fetch superhero data. Ensure you have a valid API key and add it to the `.env` file.
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## Scripts
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+- `npm run dev`: Start the development server.
+- `npm run build`: Build the app for production.
+- `npm run start`: Start the production server.
+- `npm run lint`: Run ESLint to check for code issues.
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Contributing
 
-## Learn More
+Contributions are welcome! Please follow these steps:
 
-To learn more about Next.js, take a look at the following resources:
+1. Fork the repository.
+2. Create a new branch:
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+3. Commit your changes:
+   ```bash
+   git commit -m "Add your message here"
+   ```
+4. Push to your branch:
+   ```bash
+   git push origin feature/your-feature-name
+   ```
+5. Open a pull request.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+## License
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This project is licensed under the MIT License. See the `LICENSE` file for details.
 
-## Deploy on Vercel
+## Acknowledgments
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+- [RapidAPI Superhero API](https://rapidapi.com/)
+- [Material-UI](https://mui.com/)
+- [Next.js](https://nextjs.org/)

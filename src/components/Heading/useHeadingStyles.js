@@ -10,7 +10,7 @@ export const useHeadingStyles = () => {
       textAlign: 'center',
     },
     spanText: {
-      color: '#9C27B0',
+      color: '#ffffff',
     },
     subheading: {
       mt: 2,

@@ -4,6 +4,7 @@ import { Box } from '@mui/material'
 import SuperheroDetailRow from './SuperheroDetailRow'
 import { useSuperheroCardStyles } from './useSuperheroCardStyles'
 import Image from 'next/image'
+import { MESSAGES } from '@/shared/constants'
 
 const SuperheroCard = ({ superheroInfo }) => {
   const styles = useSuperheroCardStyles();
@@ -23,7 +24,7 @@ const SuperheroCard = ({ superheroInfo }) => {
   if (!superheroInfo || !images || !images.lg) {
     return (
       <Box sx={{ color: 'red', mt: 4, fontWeight: 700 }}>
-        Superhero not found. Please try another name.
+        {MESSAGES.SUPERHERO_NOT_FOUND}
       </Box>
     );
   }

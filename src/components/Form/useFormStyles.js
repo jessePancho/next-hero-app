@@ -31,10 +31,10 @@ export const useFormStyles = () => {
       borderRadius: '0.125rem',
       fontFamily: 'Raleway, sans-serif',
       '& .MuiInputBase-input': {
-        color: theme.palette.text.secondary,
+        color: theme.palette.text.primary,
       },
       '& .MuiInputBase-input::placeholder': {
-        color: theme.palette.text.secondary,
+        color: theme.palette.text.primary,
       },
       '& .MuiOutlinedInput-root': {
         '& fieldset': {
@@ -48,7 +48,7 @@ export const useFormStyles = () => {
         },
       },
       '& .MuiInputBase-input': {
-        color: '#000',
+        color: theme.palette.text.primary,
       },
     },
     button: {

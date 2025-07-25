@@ -1,5 +1,4 @@
 import { store } from "@/redux/store";
-import "@/styles/globals.css";
 import theme from "@/styles/theme";
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { Provider } from "react-redux";

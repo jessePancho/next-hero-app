@@ -4,6 +4,17 @@ import { useTheme } from "@mui/material"
 export const useSuperheroCardStyles = () => {
   const theme = useTheme();
 
+  const sharedStyles = {
+    textTransform: 'uppercase',
+    fontFamily: 'Raleway, sans-serif',
+    fontWeight: 'bold',
+    letterSpacing: '0.05em',
+    fontSize: '1rem',
+    [theme.breakpoints.up('md')]: {
+      fontSize: '1rem',
+    },
+  }
+
   return {
     characterDetails: {
       display: 'flex',
@@ -31,31 +42,17 @@ export const useSuperheroCardStyles = () => {
       justifyContent: 'space-between',
       width: '100%',
 
-      [theme.breakpoints.up('md')]: {
+      [theme.breakpoints.down('md')]: {
         flexDirection: 'column',
       },
     },
     detailLabel: {
-      color: theme.palette.custom?.active || 'blue',
-      textTransform: 'uppercase',
-      fontFamily: 'Raleway, sans-serif',
-      fontWeight: 'bold',
-      letterSpacing: '0.05em',
-      fontSize: '1rem',
-      [theme.breakpoints.up('md')]: {
-        fontSize: '1rem',
-      },
+      color: theme.palette.primary.main || 'blue',
+      ...sharedStyles
     },
     detailValue: {
-      color: theme.palette.secondary.main || 'blue',
-      textTransform: 'uppercase',
-      fontFamily: 'Raleway, sans-serif',
-      fontWeight: 'bold',
-      letterSpacing: '0.05em',
-      fontSize: '1rem',
-      [theme.breakpoints.up('md')]: {
-        fontSize: '1rem',
-      },
+      color: theme.palette.text.primary || 'blue',
+      ...sharedStyles
     }
   }
 }

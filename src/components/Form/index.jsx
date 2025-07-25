@@ -4,6 +4,9 @@ import { useFormStyles } from './useFormStyles';
 import { Box, Button, CircularProgress, TextField, Typography } from '@mui/material';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchHero } from '@/redux/slices/heroSlice';
+import { MESSAGES } from '@/shared/constants'
+
+console.log('SuperHeroForm component loaded', MESSAGES);
 
 const SuperHeroForm = () => {
   const [name, setName] = useState('');
@@ -27,14 +30,16 @@ const SuperHeroForm = () => {
             autoFocus={true}
             type='text'
             sx={styles.input}
-            placeholder="Enter the name of superhero..."
+            placeholder={MESSAGES.SEARCH_PLACEHOLDER}
+            aria-label='Search for superhero'
             onChange={e => setName(e.target.value)}
           />
           <Button
             sx={styles.button}
             onClick={handleSearch}
+            aria-label='Search button'
           >
-            Search
+            {MESSAGES.SEARCH_BUTTON}
           </Button>
         </Box>
       </Box>
