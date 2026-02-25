@@ -6,7 +6,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchHero } from '@/redux/slices/heroSlice';
 import { MESSAGES } from '@/shared/constants'
 
-console.log('SuperHeroForm component loaded', MESSAGES);
 
 const SuperHeroForm = () => {
   const [name, setName] = useState('');
@@ -14,6 +13,7 @@ const SuperHeroForm = () => {
   const dispatch = useDispatch();
 
   const { data, loading, error } = useSelector((state) => state.hero);
+
 
   const handleSearch = async (e) => {
     e.preventDefault();

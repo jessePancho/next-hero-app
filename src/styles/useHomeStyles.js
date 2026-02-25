@@ -11,7 +11,7 @@ export const useHomeStyles = () => {
       alignItems: 'center',
       position: 'relative',
       minHeight: '100vh',
-      pt: 10,
+      pt: 5,
       pb: 6,
     },
     heroDetailRow: {

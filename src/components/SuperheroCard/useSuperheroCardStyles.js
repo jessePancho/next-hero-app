@@ -16,12 +16,31 @@ export const useSuperheroCardStyles = () => {
   }
 
   return {
+    imageContainer: {
+      position: 'relative'
+    },
+    alignmentContainer: {
+      position: 'absolute',
+      backgroundColor: 'yellow',
+      color: 'black',
+      padding: '0.25rem'
+    },
+    logoContainer: {
+      position: 'absolute',
+      bottom: 8,
+      right: 8,
+      width: 50,
+      height: 50
+    },
+    logoImg: {
+      objectFit: 'contain'
+    },
     characterDetails: {
       display: 'flex',
       justifyContent: 'center',
       gap: 2,
-      marginTop: '3rem',
-      width: '50%',
+      marginTop: '0.5rem',
+      width: '60%',
       height: '80%',
       '@media (max-width: 768px)': {
         flexDirection: 'column',
@@ -31,17 +50,18 @@ export const useSuperheroCardStyles = () => {
       }
     },
     profileStyles: {
+
       display: 'flex',
       flexDirection: 'column',
-      justifyContent: 'center',
-      marginLeft: '2rem',
-      width: '50%',
+      justifyContent: 'start',
+      // marginLeft: '2rem',
+      width: '85%',
     },
     characterDetailRow: {
       display: 'flex',
       justifyContent: 'space-between',
       width: '100%',
-
+      alignItems: 'center',
       [theme.breakpoints.down('md')]: {
         flexDirection: 'column',
       },
@@ -53,6 +73,13 @@ export const useSuperheroCardStyles = () => {
     detailValue: {
       color: theme.palette.text.primary || 'blue',
       ...sharedStyles
+    },
+    progress: {
+      background: 'gray',
+      flexGrow: 1, mx: 2,
+      '& .MuiLinearProgress-bar1': {
+        background: 'red'
+      }
     }
   }
 }

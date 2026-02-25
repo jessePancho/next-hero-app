@@ -5,7 +5,7 @@ export const useHeadingStyles = () => {
     heading: {
       fontFamily: 'Raleway, sans-serif',
       fontWeight: 'bold',
-      fontSize: { xs: '2rem', md: '3.75rem' },
+      fontSize: { xs: '2rem', md: '2.75rem' },
       color: 'primary.main',
       textAlign: 'center',
     },
@@ -19,7 +19,7 @@ export const useHeadingStyles = () => {
       textTransform: 'uppercase',
       letterSpacing: 2,
       color: 'text.secondary',
-      fontSize: { xs: '1rem', md: '1.5rem' },
+      fontSize: { xs: '1rem', md: '1rem' },
       px: { xs: 2, md: 0 },
       textAlign: 'center',
     },
